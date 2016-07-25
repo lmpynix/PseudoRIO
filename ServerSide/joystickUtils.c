@@ -25,7 +25,7 @@
 #include <unistd.h>
 #include <stdbool.h>
 #include "libenjoy/src/libenjoy.h"
-#include "misc/errout.h"
+#include "misc/printToStderr.h"
 
 libenjoy_context *le_ctx;
 libenjoy_joy_info_list *le_jinfo;
@@ -46,5 +46,9 @@ libenjoy_context *joystickutils_init(bool doPopulateInfo = true)
 	}
 	
 
-*float get_joystick(
+*float get_joystick()
+{
+	//TODO: Write something here.
+	return 0;
+}
 

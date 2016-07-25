@@ -21,10 +21,10 @@
  * 
  */
 
-int printStderr(const char * errortext = "An Undefined Error Occurred.",
-                const int * addNewLine = 1);
+int printStderr(const char * errortext,
+                const int * addNewLine);
 int printStderr_Multi(const char * errortext, 
                       const int * numLines, 
-                      const int * addNewLine = 1);
+                      const int * addNewLine);
 
 
