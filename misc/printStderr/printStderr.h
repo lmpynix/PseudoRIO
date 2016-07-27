@@ -21,10 +21,28 @@
  * 
  */
 
-int printStderr(const char * errortext,
-                const int * addNewLine);
-int printStderr_Multi(const char * errortext, 
-                      const int * numLines, 
-                      const int * addNewLine);
+// Error message printed when printStderr() run with no argument.
+char default_error_msg[32] = "An Unknown Error has Occurred.";
 
+// Number of spaces that are in an indent.
+int indent_length = 4;
+
+// Structure for printStderr_Struct.
+
+typedef struct PrintableError
+{
+	char ** errortext;
+	int numLines;
+	int addNewLine;
+	int indentFollowingLines;
+};
+
+int printStderr(const char * errortext, const int addNewLine);
+
+int printStderr_Multi(	const char ** errortext,
+						const int * numLines,
+						const int addNewLine,
+						const int indentFollowingLines);
+
+int printStderr_Struct(const PrintableError * errorStruct);
 
